@@ -1,13 +1,9 @@
-Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
-Is the slope of the linear model considered to be zero? Why or why not?
-Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+  This analysis was conducted to determine whether certain vehicle design specifications had an effect on the mpg of a car, and whether the weight capacity of multiple suspension coils were consistent across various lots of cars. 
 
-significant values: length, weight, ground clearance 
+  To answer the first question, a multiple linear regression was run on the mpg vs the design specifications to see which categories were significant. It was found that the vehicle length and ground clearance are statistically unlikely to provide random amounts of variance to the linear model and therefore have a significant impact on the mpg. The intercept of the regression was also significant, meaning that there are other variables that contribute to the variation of a vehicle's mpg. The slopes of the vehicle length vs mpg and ground clearance vs mpg were 6.276 and 3.546, respectively. This shows a positive correlation between the two categories and mpg. Although these two variables are significant and positively correlated with mpg, the linear model does not effectively predict the mpg of MechaCar prototypes because the high significance value of the Intercept is evidence of overfitting. This means that while the model predicts the current dataset well, it cannot be used to predict a future data set correctly. 
 
-> model <- lm(qsec~hp,mtcars)
-> yvals <- model$coefficients['hp']*mtcars$hp +
-+ model$coefficients[('Intercept')]
-> plt <- ggplot(mtcars,aes(x=hp,y=qsec))
-> plt + geom_point() + geom_line(aes(y=yvals), color = "red")
+  
 
 suspension t test- two means are statistically similar, fail to reject the null
+
+cost vs fuel efficiency t test 
